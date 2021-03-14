@@ -1,7 +1,20 @@
-document.querySelector("img").setAttribute("src", "logo.png");
-document.querySelector("h1").setAttribute("style", "color: #666; text-align: left; text-transform: uppercase;");
-document.querySelector("h3").setAttribute("style", "color: #666; text-align: left;");
-
-var createText = document.querySelector("p");
-createText.setAttribute("style", "color: #636;");
-createText.textContent = "Здесь мог бы быть выш отзыв";
+var divBox = document.getElementById('box');
+divBox.setAttribute("style", "display: flex; justify-content: center;");
+var divContainer = document.createElement("div");
+divBox.appendChild(divContainer);
+divContainer.setAttribute("style", "display: block; width: 40%; margin-top: 100px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 15px 30px 15px 30px; background-color: darkgrey; border: 3px #ccc;");
+var imgBox = document.createElement("img");
+imgBox.setAttribute("src", "logo.png");
+divContainer.appendChild(imgBox);
+var title1 = document.createElement("h1");
+title1.setAttribute("style", "color: #666; text-align: left; text-transform: uppercase;");
+title1.textContent = "Заголовок";
+divContainer.appendChild(title1);
+var title2 = document.createElement("h3");
+title2.setAttribute("style", "color: #666; text-align: left;");
+title2.textContent = "Подзаголовок";
+divContainer.appendChild(title2);
+var textP = document.createElement("p");
+textP.setAttribute("style", "color: #636;");
+textP.textContent = "Здесь мог бы быть выш отзыв";
+divContainer.appendChild(textP);
